@@ -73,11 +73,11 @@ define([
 
         }));
         if (this.config.dialog) {
-          this.browser.afterMilestone('completely initialized', function () {
+          browser.afterMilestone('completely initialized', function () {
             setTimeout(function () {
-              domClass.add('faceted_tracksel', 'active');
+              //domClass.add('faceted_tracksel', 'active');
               domStyle.set('faceted_tracksel', 'left', '0%');
-            }, 700);
+            }, 1000);
           });
         }
       },
