@@ -74,10 +74,12 @@ define([
         }));
         if (this.config.dialog) {
           browser.afterMilestone('completely initialized', function () {
+            if(browser.view.tracks.length < 1){
             setTimeout(function () {
-              //domClass.add('faceted_tracksel', 'active');
+              domClass.add('faceted_tracksel', 'active');
               domStyle.set('faceted_tracksel', 'left', '0%');
-            }, 1000);
+            }, 2000);
+            }
           });
         }
       },
